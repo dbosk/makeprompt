@@ -1,0 +1,63 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish,british]{babel}
+
+\usepackage{noweb}
+\usepackage{booktabs}
+
+% Verbose citation style: full reference on first use, short form on
+% repeats.  This goes with memoir + didactic: didactic sets
+% autocite=footnote and places footnotes in the margin, so \autocite
+% yields the full reference as a margin note.  Without memoir+didactic
+% verbose footnotes land at the page foot; use alphabetic/authoryear
+% there instead.  Cite with \autocite in body text; inside \ltnote or any
+% \marginpar use \parencite (a footnote inside a margin float is fatal:
+% "Float(s) lost").
+\usepackage[
+  natbib,
+  backend=biber,
+  style=verbose,
+  citestyle=verbose,
+  singletitle=false,
+  maxbibnames=99,
+]{biblatex}
+\addbibresource{bibliography.bib}
+
+\usepackage[all]{foreign}
+\renewcommand{\foreignfullfont}{}
+\renewcommand{\foreignabbrfont}{}
+
+%\usepackage{newclude}
+\usepackage{import}
+
+\usepackage[strict]{csquotes}
+\usepackage[single]{acro}
+
+\usepackage{subcaption}
+
+\usepackage[noend]{algpseudocode}
+\usepackage{xparse}
+
+\let\email\texttt
+
+\usepackage[outputdir=ltxobj]{minted}
+\setminted{autogobble,linenos}
+
+\usepackage{pythontex}
+\setpythontexoutputdir{.}
+\setpythontexworkingdir{..}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage[unq]{unique}
+\DeclareMathOperator{\powerset}{\mathcal{P}}
+
+\usepackage[binary-units]{siunitx}
+
+\usepackage{didactic}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage{cleveref}
